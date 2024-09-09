@@ -6,6 +6,8 @@ import styles from './styles/ImageScroll.module.css';
 const images = [
   '/image1.jpg',
   '/image2.jpg',
+  '/image2.jpg',
+  '/image2.jpg',
   // We can add more images here
 ];
 
