@@ -1,0 +1,32 @@
+* {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23000000' stroke='%23808080' stroke-width='2'/%3E%3C/svg%3E"), auto;
+}
+
+.title-page {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+}
+.section-title {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+}
+
+.point-test {
+    text-shadow: 0 0 5px #0066cc, 0 0 10px #0066cc, 0 0 20px #0066cc, 0 0 40px #0066cc;
+    color: #e6f2ff;
+    
+}
+details > summary {
+    list-style: none;
+  }
+  
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details > summary::after {
+    content: '▼';
+    float: right;
+  }
+  
+  details[open] > summary::after {
+    content: '▲';
+  }
