@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "AK Brain Tumor CNNs",
   description: "Brain tumor detection using CNN",
   icons: {
-    icon: '/braintumorcnn/public/favicon.ico',
+    icon: '/favicon.ico',
     // Add more sizes/formats if needed
   },
 };
