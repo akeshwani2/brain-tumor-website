@@ -3,26 +3,44 @@ import Image from "next/image";
 import "./page.css";
 import ImageScroll from './ImageScroll';
 import Social from './Social';
+import { useState } from 'react';
 
 export default function Home() {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen p-8">
-      <header className="mb-8">
-        <h1 className="text-2xl mb-1 title-page text-center sm:text-left">
-          Brain Tumor Detection & Segmentation Using CNNs on MRI Scans
-        </h1> 
-        <p className="text-sm title-page text-center sm:text-left">Author: Arhaan Keshwani</p>
-        <div className="mt-4 flex justify-center sm:justify-start">
-          <Social containerStyles="flex gap-4" iconStyles="w-10 h-10 border rounded-full border-accent flex justify-center items-center cursor-pointer hover:bg-white hover:text-black shadow-[0_0_35px_rgba(0,0,300,0.9)]" />
+      
+      <header className="mb-8 flex flex-col sm:flex-row items-center sm:items-start">
+        <div className="mr-0 sm:mr-4 mb-4 sm:mb-0">
+          {!imgError ? (
+            <Image
+              src="/brain.jpg"
+              alt="Brain Tumor MRI"
+              width={110}
+              height={110}
+              className="rounded-full"
+              onError={() => setImgError(true)}
+            />
+          ) : (
+            <div className="w-[100px] h-[100px] bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+              Image not found
+            </div>
+          )}
         </div>
-        <div className="">
-
-  </div>
-        
+        <div>
+          <h1 className="text-2xl mb-1 title-page text-center sm:text-left">
+            Brain Tumor Detection & Segmentation Using CNNs on MRI Scans
+          </h1> 
+          <p className="text-sm title-page text-center sm:text-left">Author: Arhaan Keshwani</p>
+          <div className="mt-4 flex justify-center sm:justify-start">
+            <Social containerStyles="flex gap-4" iconStyles="w-10 h-10 border rounded-full border-accent flex justify-center items-center cursor-pointer hover:bg-white hover:text-black shadow-[0_0_35px_rgba(0,0,300,0.9)]" />
+          </div>
+        </div>
       </header>
       <main className="flex-grow flex flex-col lg:flex-row">
         <div className="w-full lg:w-2/3 pr-0 lg:pr-8 mb-8 lg:mb-0">
-          <section className="max-w-2xl">
+          <section className="max-w-2xl pt-4">
             <h2 className="text-xl mb-4 section-title">Overview</h2>
             <text>
             This project uses convolutional neural networks (CNNs) to detect and segment brain tumors. It aims to detect and segment brain 
@@ -159,7 +177,7 @@ brain-tumor-cnn/
         </section>
       </div>
       <div className="w-full lg:w-1/2">
-        <section className="image-scroll h-[50vh] lg:h-full overflow-hidden">
+        <section className="image-scroll h-[50vh] lg:h-full pt-4 overflow-hidden">
         <h1 className="text-2xl mb-4 section-title">Results</h1>
         <ImageScroll />
         </section>
