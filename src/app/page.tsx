@@ -34,7 +34,7 @@ export default function Home() {
           </h1> 
           <p className="text-sm title-page text-center sm:text-left">Author: Arhaan Keshwani</p>
           <div className="mt-4 flex justify-center sm:justify-start">
-            <Social containerStyles="flex gap-4" iconStyles="w-10 h-10 border rounded-full border-accent flex justify-center items-center cursor-pointer hover:bg-white hover:text-black shadow-[0_0_35px_rgba(0,0,300,0.9)]" />
+            <Social containerStyles="flex gap-4" iconStyles="w-10 h-10 border rounded-full border-accent flex justify-center items-center hover:bg-white hover:text-black shadow-[0_0_35px_rgba(0,0,300,0.9)]" />
           </div>
         </div>
       </header>
