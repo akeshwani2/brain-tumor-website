@@ -4,10 +4,14 @@ import styles from './styles/ImageScroll.module.css';
 
 // This is our list of images
 const images = [
+  '/image6.jpg',
+  '/image7.jpg',
+  '/image5.jpg',
   '/image1.jpg',
   '/image2.jpg',
-  '/image2.jpg',
-  '/image2.jpg',
+  '/image3.jpg',
+  '/image4.jpg',
+
   // We can add more images here
 ];
 
@@ -49,8 +53,8 @@ export default function ImageScroll() {
             <Image
               src={src}
               alt={`Scroll image ${index + 1}`}
-              width={700}
-              height={700}
+              width={900}
+              height={900}
               className={styles.scrollImage}
             />
           </div>
