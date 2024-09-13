@@ -49,7 +49,7 @@ export default function ImageScroll() {
     <div className={styles.imageScroll} ref={scrollRef}>
       <div className={styles.scrollingImages}>
         {/* We repeat the images three times to make sure we have enough */}
-        {[...images, ...images, ...images].map((src, index) => (
+        {[...images, ...images, ...images, ...images, ...images, ...images, ...images, ...images].map((src, index) => (
           <div key={index} className={styles.imageWrapper}>
             <Image
               src={src}
