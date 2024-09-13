@@ -139,8 +139,9 @@ brain-tumor-cnn/
               <p className="pl-8"> ii. Encoder-decoder structure with skip connections</p>
               <p className="pl-8"> iii. Particularly effective for medical image segmentation</p>
               <p className="pl-8"> iv. Maintains high-resolution features throughout the network</p>
-              <p className="pl-4">In this project, ResUNet is used for the segmentation task (outlining tumor regions)</p>
+              <p className="pl-4 pb-4">In this project, ResUNet is used for the segmentation task (outlining tumor regions)</p>
             </ul>
+            <img src="/image9.jpg" alt="ResUNet Architecture"></img>
           </details>
         </section>
         <section className="max-w-2xl">
